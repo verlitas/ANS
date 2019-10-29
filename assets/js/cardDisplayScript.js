@@ -60,3 +60,10 @@ AppendImage(dummyObjects);
 $row.on("click", function(event){
     console.log("ID of target : " + $(event.target).attr("id"));
 })
+
+//---------MODAL--------//
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
