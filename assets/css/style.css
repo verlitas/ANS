@@ -1,0 +1,12 @@
+body {
+    background-color:rgb(137,1,0);
+}
+nav {
+    background-color: black;
+    text-align: center;
+    height: auto;
+}
+
+#search {
+    background: black;
+}
