@@ -9,20 +9,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <style>
-    body {
-        background-color:rgb(137,1,0);
-    }
-    nav {
-        background-color: black;
-        text-align: center;
-        height: auto;
-    }
-    </style>
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,15 +20,26 @@
         <div class="row">
             <div class="col s12">
                 <nav>
-                    <a class="logo"><img src="assets/img/webname.png"></a>
+                    <a class="logo" href="index.html"><img src="assets/img/webname.png"></a>
                 </nav>
             </div>
         </div>
         <div class="row">
-            <div class="col s7">
-                <form id="search"></form>
-                <button id="submit"></button>
+            <div id="col s7">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">CARD</a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Movie Title: <span id="title"></span></h4>
+                        <h6><b>Actors:</b> <span id="actors"></span></h6>
+                        <h6><b>Plot:</b> <span id="plot"></span></h6>
+                        <h6><b>Rating:</b> <span id="rating"></span></h6>
+                        <h6><b>Release:</b> <span id="release"></span></h6>
+                    </div>
+                </div>
             </div>
+
             <div class="col s5">
 
                 <div id="instruction"></div>
