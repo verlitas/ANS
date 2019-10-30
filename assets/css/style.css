@@ -24,7 +24,9 @@
 }
 
 body{
-background-color:black;
+/* background-color:black; */
+background-image: url("altbg.jpg");
+background-size: cover;
 }
 
 #search-bar{
@@ -41,6 +43,16 @@ nav {
     height: auto;
 }
 
-#search {
-    background: black;
+
+#instructions{
+ 
+    color:rgb(227, 233, 231);
+
+
 }
+
+
+
+/* #search {
+    background: black;
+} */
