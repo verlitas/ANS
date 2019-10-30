@@ -21,15 +21,8 @@ h4, h6 {
     width: fit-content;
 }
 
-<<<<<<< HEAD
-body{
-/* background-color:black; */
-background-image: url("altbg.jpg");
-background-size: cover;
-=======
 #title, #actors, #plot, #rating, #release {
     color: black;
->>>>>>> 56331222594d8203d6063a6448403b22b9b9fd63
 }
 
 #row2 {
@@ -42,22 +35,6 @@ background-size: cover;
     background-color: #b0151f;
 }
 
-<<<<<<< HEAD
-
-#instructions{
- 
-    color:rgb(227, 233, 231);
-
-
-}
-
-
-
-/* #search {
-    background: black;
-} */
-=======
 .container {
     border-radius: 10px;
 }
->>>>>>> 56331222594d8203d6063a6448403b22b9b9fd63
