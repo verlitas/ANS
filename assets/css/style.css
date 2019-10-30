@@ -17,7 +17,11 @@ h4, h6 {
     display: flex;
 }
 
-#actors, #plot, #rating, #release {
+#modal {
+    width: fit-content;
+}
+
+#title, #actors, #plot, #rating, #release {
     color: black;
 }
 
@@ -33,6 +37,4 @@ h4, h6 {
 
 .container {
     border-radius: 10px;
-}
-
 }
