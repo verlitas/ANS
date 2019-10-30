@@ -1,48 +1,48 @@
-#search-column{
-    background-color: rgb(216, 36, 36);
-    border-style: solid;
-    border-color: rgb(117, 33, 33);
-    border-width: 3px;
-    border-style: solid;
-    border-radius:10px;
+body {
+    background-color: black;
+    color: ghostwhite;
+    font-family: 'Staatliches', cursive;
 }
 
-#search-header{
-    color: rgb(236, 242, 238);
-    font-weight: bold;
-
+nav {
+    text-align: center;
+    height: auto;
+    background-color: transparent;
 }
 
-#submit-btn{
-    float: right;
-    border-radius: 7px;
-    background-color: rgb(236, 242, 238);
+h4, h6 {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
 }
 
-#rule{
-    border-color: black;
+#modal {
+    width: fit-content;
 }
 
+<<<<<<< HEAD
 body{
 /* background-color:black; */
 background-image: url("altbg.jpg");
 background-size: cover;
+=======
+#title, #actors, #plot, #rating, #release {
+    color: black;
+>>>>>>> 56331222594d8203d6063a6448403b22b9b9fd63
 }
 
-#search-bar{
-
-    color: rgb(236, 242, 238);
-
-}
-/* body {
-    background-color:rgb(137,1,0);
-} */
-nav {
-    background-color: black;
-    text-align: center;
-    height: auto;
+#row2 {
+    background-color: rgb(216, 36, 36);
 }
 
+#submit-btn {
+    float: right;
+    border-radius: 7px;
+    background-color: #b0151f;
+}
+
+<<<<<<< HEAD
 
 #instructions{
  
@@ -56,3 +56,8 @@ nav {
 /* #search {
     background: black;
 } */
+=======
+.container {
+    border-radius: 10px;
+}
+>>>>>>> 56331222594d8203d6063a6448403b22b9b9fd63
