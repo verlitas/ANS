@@ -7,17 +7,17 @@ var $row = $("#posters-row");
 
 var dummyObject = {
     title : "dummyTitle",
-    source : "https://via.placeholder.com/300x300"
+    source : "https://via.placeholder.com/200x300"
 }
 
 var dummyObjects = [
     {
         title : "dummy1",
-        source : "https://via.placeholder.com/300x300"
+        source : "https://via.placeholder.com/200x300"
     },
     {
         title : "dummy2",
-        source : "https://via.placeholder.com/300x300"
+        source : "https://via.placeholder.com/200x300"
     }
 ]
 

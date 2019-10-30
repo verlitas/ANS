@@ -9,6 +9,9 @@ nav {
     text-align: center;
     height: auto;
 }
+hr {
+    border: 1.5px solid black;
+}
 
 #row2 {
     background-color: rgb(216, 36, 36);
@@ -19,8 +22,4 @@ nav {
     float: right;
     border-radius: 7px;
     background-color: rgb(236, 242, 238);
-}
-
-#rule{
-    border-color: black;
 }

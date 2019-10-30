@@ -33,20 +33,24 @@
         <!--content row-->
         <div class="row" id="row2">
             <div class="col s7" id="column">
-                <h4 id="search-header">Search For Actors</h4>
-                <hr id="rule">
+                <h4>Search For Actors</h4>
+                <hr>
                 <!--search-->
                 <form id="search">
-                    <div class="input-field col inline">
-                        <input placeholder="Actor Name" type="text" id="search-bar"> <button
-                            id="submit-btn">Search...</button>
+                    <div class="input-field col s12">
+                        <input id="search-bar" class="materialize-textarea"></input>
+                        <label for="textarea1">Search For Actor...</label>
+                        <button id="submit-btn">Search</button>
                     </div>
                 </form>
+                <h4>They are also in...</h4>
+                <hr>
             </div>
 
             <!--instructions-->
             <div class="col s5" id="column">
                 <h4 id="instruction-header">Instructions</h4>
+                <hr>
                 <li class="collection-item">Think of your favorite actor</li>
                 <li class="collection-item">Type their name in the search bar</li>
                 <li class="collection-item">The results will show below</li>
