@@ -76,7 +76,7 @@ function dummy_getMovies(pActorName){
       release : "2010"
     },
     {
-      title : "dummy 2",
+      title : "dummy 3",
       source : "https://via.placeholder.com/300x300",
       actors : "actor1, actor2",
       plot : "Something happens and people do stuff about it",
