@@ -1,7 +1,7 @@
-body{
-background-color:black;
-color: ghostwhite;
-font-family: 'Kanit', sans-serif;
+body {
+    background-color: black;
+    color: ghostwhite;
+    font-family: 'Staatliches', cursive;
 }
 
 nav {
@@ -9,17 +9,30 @@ nav {
     text-align: center;
     height: auto;
 }
-hr {
-    border: 1.5px solid black;
+
+h4, h6 {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#actors, #plot, #rating, #release {
+    color: black;
 }
 
 #row2 {
     background-color: rgb(216, 36, 36);
-    
 }
 
-#submit-btn{
+#submit-btn {
     float: right;
     border-radius: 7px;
-    background-color: rgb(236, 242, 238);
+    background-color: #b0151f;
+}
+
+.container {
+    border-radius: 10px;
+}
+
 }

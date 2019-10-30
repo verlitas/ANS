@@ -13,7 +13,7 @@
     <!--css-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,24 +33,20 @@
         <!--content row-->
         <div class="row" id="row2">
             <div class="col s7" id="column">
-                <h4>Search For Actors</h4>
-                <hr>
+                <h4 class="z-depth-4">Search For Actors</h4>
                 <!--search-->
                 <form id="search">
                     <div class="input-field col s12">
-                        <input id="search-bar" class="materialize-textarea"></input>
-                        <label for="textarea1">Search For Actor...</label>
-                        <button id="submit-btn">Search</button>
+                        <input id="search-bar" placeholder="Search For Actor..."></input>
+                        <button class="waves-effect waves-light btn" id="submit-btn">Search</button>
                     </div>
                 </form>
-                <h4>They are also in...</h4>
-                <hr>
+                <h4 class="z-depth-5">They are also in...</h4>
             </div>
 
             <!--instructions-->
             <div class="col s5" id="column">
-                <h4 id="instruction-header">Instructions</h4>
-                <hr>
+                <h4 id="instruction-header" class="z-depth-5">Instructions</h4>
                 <li class="collection-item">Think of your favorite actor</li>
                 <li class="collection-item">Type their name in the search bar</li>
                 <li class="collection-item">The results will show below</li>
@@ -63,17 +59,17 @@
 
         <!--posters row-->
         <div id="posters-row" class="row">
-            <!--modal trigger-->
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">CARD</a>
-            <!--modal structure-->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>Movie Title: <span id="title"></span></h4>
-                    <h6><b>Actors:</b> <span id="actors"></span></h6>
-                    <h6><b>Plot:</b> <span id="plot"></span></h6>
-                    <h6><b>Rating:</b> <span id="rating"></span></h6>
-                    <h6><b>Release:</b> <span id="release"></span></h6>
-                </div>
+        </div>
+        <!--modal trigger-->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">CARD</a>
+        <!--modal structure-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Movie Title:</h4><span id="title">This is the movie title</span>
+                <h6>Actors:</h6> <span id="actors">These are the actors</span>
+                <h6>Plot:</h6><span id="plot">This is the best plot ever</span>
+                <h6>Rating:</h6><span id="rating">-10000/1</span>
+                <h6>Release:</h6><span id="release">2094</span>
             </div>
         </div>
 
