@@ -7,6 +7,7 @@ body {
 nav {
     text-align: center;
     height: auto;
+    background-color: transparent;
 }
 
 h4, h6 {
