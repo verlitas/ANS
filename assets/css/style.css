@@ -1,46 +1,40 @@
-#search-column{
-    background-color: rgb(216, 36, 36);
-    border-style: solid;
-    border-color: rgb(117, 33, 33);
-    border-width: 3px;
-    border-style: solid;
-    border-radius:10px;
-}
-
-#search-header{
-    color: rgb(236, 242, 238);
-    font-weight: bold;
-
-}
-
-#submit-btn{
-    float: right;
-    border-radius: 7px;
-    background-color: rgb(236, 242, 238);
-}
-
-#rule{
-    border-color: black;
-}
-
-body{
-background-color:black;
-}
-
-#search-bar{
-
-    color: rgb(236, 242, 238);
-
-}
-/* body {
-    background-color:rgb(137,1,0);
-} */
-nav {
+body {
     background-color: black;
+    color: ghostwhite;
+    font-family: 'Staatliches', cursive;
+}
+
+nav {
     text-align: center;
     height: auto;
+    background-color: transparent;
 }
 
-#search {
-    background: black;
+h4, h6 {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#modal {
+    width: fit-content;
+}
+
+#title, #actors, #plot, #rating, #release {
+    color: black;
+}
+
+#row2 {
+    background-color: rgb(216, 36, 36);
+}
+
+#submit-btn {
+    float: right;
+    border-radius: 7px;
+    background-color: #b0151f;
+}
+
+.container {
+    border-radius: 10px;
 }

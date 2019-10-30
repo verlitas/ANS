@@ -7,17 +7,17 @@ var $row = $("#posters-row");
 
 var dummyObject = {
     title : "dummyTitle",
-    source : "https://via.placeholder.com/300x300"
+    source : "https://via.placeholder.com/200x300"
 }
 
 var dummyObjects = [
     {
         title : "dummy1",
-        source : "https://via.placeholder.com/300x300"
+        source : "https://via.placeholder.com/200x300"
     },
     {
         title : "dummy2",
-        source : "https://via.placeholder.com/300x300"
+        source : "https://via.placeholder.com/200x300"
     }
 ]
 
@@ -60,3 +60,10 @@ AppendImage(dummyObjects);
 $row.on("click", function(event){
     console.log("ID of target : " + $(event.target).attr("id"));
 })
+
+//---------MODAL--------//
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
