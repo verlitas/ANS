@@ -1,16 +1,18 @@
-#search-column{
-    background-color: rgb(216, 36, 36);
-    border-style: solid;
-    border-color: rgb(117, 33, 33);
-    border-width: 3px;
-    border-style: solid;
-    border-radius:10px;
+body{
+background-color:black;
+color: ghostwhite;
+font-family: 'Kanit', sans-serif;
 }
 
-#search-header{
-    color: rgb(236, 242, 238);
-    font-weight: bold;
+nav {
+    background-color: black;
+    text-align: center;
+    height: auto;
+}
 
+#row2 {
+    background-color: rgb(216, 36, 36);
+    
 }
 
 #submit-btn{
@@ -21,26 +23,4 @@
 
 #rule{
     border-color: black;
-}
-
-body{
-background-color:black;
-}
-
-#search-bar{
-
-    color: rgb(236, 242, 238);
-
-}
-/* body {
-    background-color:rgb(137,1,0);
-} */
-nav {
-    background-color: black;
-    text-align: center;
-    height: auto;
-}
-
-#search {
-    background: black;
 }
