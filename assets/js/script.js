@@ -208,6 +208,7 @@ function dummy_getMovies(pActorName) {
 
   //Append the array, movieObjects, to our index.html.
   AppendImage(movieObjects);
+  return dummyMovieObjects;
 }
 
 
@@ -228,24 +229,20 @@ $("#posters-row").on("click", function (event) {
     console.log("this image")
 // then load modal
 var movieID = $(event.target).attr("id");
-movieObjects.forEach(function)
-  }
-  console.log($(event.target).hasClass("responsive-img poster"));
-
+movieObjects.forEach(function(movObj){
+var movObj_title = movObj.title;
+if (movieID === movObj_title) {
+displayObjModal(movObj);
+} 
 })
+}
 
+function displayObjModal (movObject) {
+$("#display-title") = movObject.title;
+$("#display-image") = movObject.largeimage;
+$("#display-plot") = movObject.synopsis;
+$("#display-rating") = movObject.rating;
+$("#display-release") = movObject.release;
+$("#display-runtime") = movObject.runtime;
 
-// $(function(){
-//   $('#modalTarget').modal({
-//       keyboard: true,
-//       backdrop: "static",
-//       show:false,
-      
-//   }).on('show', function(){
-//         var movieID =  
-//       //make your ajax call populate items or what even you need
-//       $(this).find('#modalDetails').html($('<b> Order Id selected: ' + getMovietitle + '</b>'))
-//   });
-// });
-
-
+}

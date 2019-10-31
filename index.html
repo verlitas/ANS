@@ -18,14 +18,14 @@
 
 <body>
     <!--main container-->
+    <!--nav logo-->
+    <nav>
+        <a class="logo" href="index.html"><img src="assets/img/webname.png"></a>
+    </nav>
     <div class="container">
         <!--first row-->
         <div class="row">
             <div class="col s12">
-                <!--nav logo-->
-                <nav>
-                    <a class="logo" href="index.html"><img src="assets/img/webname.png"></a>
-                </nav>
             </div>
         </div>
 
@@ -62,10 +62,17 @@
             </div>
             <!--modal structure-->
             <div id="modal" class="modal hide fade" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
-                <div class="modal-header">
+                <span class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                </div>
-                <div id="modalDetails" class="modal-body"></div>
+                </span>
+                <span id="modalDetails" class="modal-body">
+                    <h4>Title: <span id="display-title"></span></h4>
+                    <span id="display-image"></span>
+                    <p>Plot: <span id="display-plot"></span></p>
+                    <p>Rating: <span id="display-rating"></span></p>
+                    <p>Release: <span id="display-release"></span></p>
+                    <p>Runtime: <span id="display-runtime"></span></p>
+                </span>
             </div>
         </div>
 
@@ -75,7 +82,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--js script-->
     <script src="assets/js/cardDisplayScript.js"></script>
-    <script src = "assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
