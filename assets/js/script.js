@@ -178,7 +178,7 @@ function dummy_getMovies(pActorName) {
   var dummyMovieObjects = [
     {
       title: "dummy 1",
-      source: "https://via.placeholder.com/300x300",
+      source: "https://via.placeholder.com/200x300",
       actors: "actor1, actor2",
       plot: "Something happens and people do stuff about it",
       rating: "PG-13",
@@ -186,7 +186,7 @@ function dummy_getMovies(pActorName) {
     },
     {
       title: "dummy 2",
-      source: "https://via.placeholder.com/300x300",
+      source: "https://via.placeholder.com/200x300",
       actors: "actor1, actor2",
       plot: "Something happens and people do stuff about it",
       rating: "PG-13",
@@ -194,7 +194,15 @@ function dummy_getMovies(pActorName) {
     },
     {
       title: "dummy 3",
-      source: "https://via.placeholder.com/300x300",
+      source: "https://via.placeholder.com/200x300",
+      actors: "actor1, actor2",
+      plot: "Something happens and people do stuff about it",
+      rating: "PG-13",
+      release: "2010"
+    },
+    {
+      title: "dummy 4",
+      source: "https://via.placeholder.com/200x300",
       actors: "actor1, actor2",
       plot: "Something happens and people do stuff about it",
       rating: "PG-13",

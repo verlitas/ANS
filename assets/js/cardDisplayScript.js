@@ -47,7 +47,7 @@ function AppendImage(movieObject)
     }
 
     //Below: Create an oprhan 'div' component AND add the classes 'col' and 's4'
-    $col = $("<div>").addClass("col s4");
+    $col = $("<div>").addClass("colS4");
 
     //Below: Create an orphan 'img' component AND add an 'src' attribute with the source from our object parameter
     //Also, add the class 'responsive-img' and an ID equal to the parameter 'title'.  This will be used for referencing the object in the future.
