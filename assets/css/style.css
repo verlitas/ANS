@@ -1,3 +1,5 @@
+/*structures*/
+
 body {
     background-color: black;
     color: ghostwhite;
@@ -18,19 +20,25 @@ h4, h6 {
     display: flex;
 }
 
+/*ids*/
+
+#modalheader {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
 #modalheaders {
     background-color: #b0151f;
     padding: 9px;
     border-radius: 10px;
-    display: flex;
+    width: max-content;
+    margin-right: 5px;
 }
 
 #title, #actors, #plot, #rating, #release {
     color: black;
-}
-
-#display-image {
-    width: fit-content;
 }
 
 #row2 {
@@ -51,6 +59,17 @@ h4, h6 {
     background-color: #b0151f;
 }
 
+#searchname {
+    margin-right: 5px;
+}
+
+#modal {
+    width: 690px;
+    padding: 15px;
+}
+
+/*class*/
+
 .container {
     border-radius: 10px;
 }
@@ -61,6 +80,7 @@ h4, h6 {
 
 .display {
     color: black;
+    vertical-align: text-top;
 }
 
 .logo {
@@ -85,6 +105,12 @@ h4, h6 {
     width: 58%;
     padding: 0 10px 0 10px;
 }
+
+.colS9 {
+    width: 65%;
+}
+
+/*media*/
 
 @media screen and (max-width:800px) {
     .colS5, .colS7 {
