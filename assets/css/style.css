@@ -1,16 +1,16 @@
 /*structures*/
 
 body {
-    background-color: black;
-    color: ghostwhite;
-    font-family: 'Staatliches', cursive;
+  background-color: black;
+  color: ghostwhite;
+  font-family: "Staatliches", cursive;
 }
 
 header {
-    text-align: center;
-    height: auto;
-    background-color: transparent;
-    width: 100%;
+  text-align: center;
+  height: auto;
+  background-color: transparent;
+  object-fit: contain;
 }
 
 h4, h6 {
@@ -29,6 +29,9 @@ h4, h6 {
     font-size: 25px;
 }
 
+#modal {
+  width: fit-content;
+}
 #modalheaders {
     background-color: #b0151f;
     padding: 9px;
@@ -37,8 +40,12 @@ h4, h6 {
     margin-right: 5px;
 }
 
-#title, #actors, #plot, #rating, #release {
-    color: black;
+#title,
+#actors,
+#plot,
+#rating,
+#release {
+  color: black;
 }
 
 #row2 {
@@ -54,9 +61,9 @@ h4, h6 {
 }
 
 #submit-btn {
-    float: right;
-    border-radius: 7px;
-    background-color: #b0151f;
+  float: right;
+  border-radius: 7px;
+  background-color: #b0151f;
 }
 
 #searchname {
@@ -71,8 +78,14 @@ h4, h6 {
 /*class*/
 
 .container {
-    border-radius: 10px;
+  border-radius: 10px;
 }
+
+.logo {
+    height: auto;
+    max-width: 627px;
+    width: 100%;
+  }
 
 .responsive-img:hover {
     box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2), 0 13px 20px 0 rgba(255, 255, 255, 0.19);
@@ -117,3 +130,11 @@ h4, h6 {
         width: 100%;
     }
 }
+@media screen and (max-width: 800px) {
+    .col-s4 {
+      width: 200px;
+      height: 300px;
+      float: left;
+      margin: 15px;
+    }
+  }
