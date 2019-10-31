@@ -51,7 +51,7 @@ function AppendImage(movieObject)
 
     //Below: Create an orphan 'img' component AND add an 'src' attribute with the source from our object parameter
     //Also, add the class 'responsive-img' and an ID equal to the parameter 'title'.  This will be used for referencing the object in the future.
-    $img = $("<img>").attr("src", movieObject.source).addClass("responsive-img").attr("id", movieObject.title);
+    $img = $("<img>").attr("src", movieObject.source).addClass("responsive-img poster modal-trigger").attr("id", movieObject.title).attr("data-target", "modal");
 
     //Append the '$img' oprhan component to the oprhan component, '$col' we create earlier
     $col.append($img);
@@ -59,13 +59,3 @@ function AppendImage(movieObject)
     //Append the '$col' oprhan component to the component identified as 'posters-row' in our HTML.
     $row.append($col);
 }
-
-//----------MAIN----------//
-
-
-//---------MODAL--------//
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems);
-  });
