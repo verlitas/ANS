@@ -59,13 +59,3 @@ function AppendImage(movieObject)
     //Append the '$col' oprhan component to the component identified as 'posters-row' in our HTML.
     $row.append($col);
 }
-
-//----------MAIN----------//
-
-
-//---------MODAL--------//
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems);
-  });

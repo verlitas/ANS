@@ -22,6 +22,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 unfade($body);
 
-console.log("Hi");
-
 
