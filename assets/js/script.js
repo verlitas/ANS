@@ -123,7 +123,7 @@ function getMovies(pActorName) {
             var settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=" + pTitle /*+ "&cl=78" */ + "&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and",
+              "url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=" + pTitle + "&cl=78" + "&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and",
               "method": "GET",
               "headers": {
                 "x-rapidapi-host": "unogs-unogs-v1.p.rapidapi.com",
