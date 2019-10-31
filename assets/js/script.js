@@ -16,6 +16,7 @@ $("#submit-btn").on("click", function (event) {
 
   //Get the value (input) of the element ID'd as '#search-bar'
   var uActorName = $("#search-bar").val();
+  $("#searchname").text(uActorName);
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
   //We are running 'dummy_getMovies' to avoid wasting our API keys.
@@ -353,6 +354,7 @@ $("#posters-row").on("click", function (event) {
 })
 
 function displayObjModal(movObject) {
+
   $("#display-title").text(movObject.title);
   $("#display-image").attr("src", movObject.source);
   $("#display-plot").text(movObject.plot);
