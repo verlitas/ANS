@@ -4,11 +4,39 @@ body {
     font-family: 'Staatliches', cursive;
 }
 
-nav {
+header {
     text-align: center;
     height: auto;
     background-color: transparent;
+    width: 100%;
 }
+.logo{
+    width: 300px;
+    height: auto;
+}
+
+.colS7{
+    float: left;
+    width: 58%;
+}
+.colS5{
+    width: 42%;
+    float: left;
+}
+
+@media screen and (max-width:800px) {
+    .colS5, .colS7{
+      width:100%;
+    }
+  }
+
+.colS4{
+float: left;
+margin: 1px;
+width: 24%
+
+}
+
 
 h4, h6 {
     background-color: #b0151f;
