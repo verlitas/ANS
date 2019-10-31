@@ -1,79 +1,96 @@
 body {
-    background-color: black;
-    color: ghostwhite;
-    font-family: 'Staatliches', cursive;
+  background-color: black;
+  color: ghostwhite;
+  font-family: "Staatliches", cursive;
 }
 
 header {
-    text-align: center;
-    height: auto;
-    background-color: transparent;
+  text-align: center;
+  height: auto;
+  background-color: transparent;
+  object-fit: contain;
+}
+.logo {
+  height: auto;
+  max-width: 627px;
+  width: 100%;
+}
+/* this code is for the search and instructions elements */
+.colS7 {
+  float: left;
+  width: 58%;
+}
+.colS5 {
+  width: 42%;
+  float: left;
+}
+/* this code is for the mobile breaks*/
+@media screen and (max-width: 800px) {
+  .colS5,
+  .colS7 {
     width: 100%;
-}
-.logo{
-    width: 300px;
-    height: auto;
-}
-
-.colS7{
-    float: left;
-    width: 58%;
-}
-.colS5{
-    width: 42%;
-    float: left;
-}
-
-@media screen and (max-width:800px) {
-    .colS5, .colS7{
-      width:100%;
-    }
   }
-
-.colS4{
-float: left;
-margin: 1px;
-width: 24%
-
+}
+.col-s4 {
+  float: left;
+  margin: 5px;
+  width: 24%;
 }
 
-
-h4, h6 {
-    background-color: #b0151f;
-    padding: 9px;
-    border-radius: 10px;
-    display: flex;
+@media screen and (max-width: 800px) {
+  .col-s4 {
+    width: 200px;
+    height: 300px;
+    float: left;
+    margin: 15px;
+  }
 }
 
+h4,
+h6 {
+  background-color: #b0151f;
+  padding: 9px;
+  border-radius: 10px;
+  display: flex;
+}
+
+#modal {
+  width: fit-content;
+}
 #modalheaders {
-    background-color: #b0151f;
-    padding: 9px;
-    border-radius: 10px;
-    display: flex;
+  background-color: #b0151f;
+  padding: 9px;
+  border-radius: 10px;
+  display: flex;
 }
 
-#title, #actors, #plot, #rating, #release {
-    color: black;
+#title,
+#actors,
+#plot,
+#rating,
+#release {
+  color: black;
 }
 
 #display-image {
-    width: fit-content;
+  width: fit-content;
 }
 
 #row2 {
-    background-color: rgb(216, 36, 36);
+  background-color: rgb(216, 36, 36);
 }
 
 #submit-btn {
-    float: right;
-    border-radius: 7px;
-    background-color: #b0151f;
+  float: right;
+  border-radius: 7px;
+  background-color: #b0151f;
 }
 
 .container {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .responsive-img:hover {
-    box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2), 0 13px 20px 0 rgba(255, 255, 255, 0.19);
+  box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2),
+    0 13px 20px 0 rgba(255, 255, 255, 0.19);
 }
