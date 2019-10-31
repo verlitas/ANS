@@ -218,19 +218,3 @@ function dummy_getMovies(pActorName) {
 //----------------------------------------//
 //-------END OF BACK END FUNCTIONALITY----//
 //----------------------------------------//
-
-
-//The component identified as 'posters-row' will listen for click events.
-//Run methods based on the event target (the component which called the event).
-$row.on("click", function(event){
-  console.log("ID of target : " + $(event.target).attr("id") + "... Object : ");
-    console.log(event.target);
-
-    console.log(movieObjects);
-
-    if(Array.isArray(movieObjects))
-    {
-
-    }
-
-})
