@@ -43,6 +43,8 @@ function getMovies(pActorName) {
   //Reset the array, 'movieObjects'
   movieObjects = [];
 
+  console.log("cleared movie objects");
+
   //IF the parameter type is NOT a string, then...
   if (typeof pActorName !== "string") {
     //Log an error and return null: we do not want to run further code in this function.
@@ -208,9 +210,27 @@ function dummy_getMovies(pActorName) {
 
   //Append the array, movieObjects, to our index.html.
   AppendImage(movieObjects);
+
+  return dummyMovieObjects;
 }
 
 
 //----------------------------------------//
 //-------END OF BACK END FUNCTIONALITY----//
 //----------------------------------------//
+
+
+//The component identified as 'posters-row' will listen for click events.
+//Run methods based on the event target (the component which called the event).
+$row.on("click", function(event){
+  console.log("ID of target : " + $(event.target).attr("id") + "... Object : ");
+    console.log(event.target);
+
+    console.log(movieObjects);
+
+    if(Array.isArray(movieObjects))
+    {
+
+    }
+
+})
