@@ -21,7 +21,7 @@
     <header>
         <a class="logo" href="index.html"><img src="assets/img/webname.png"></a>
     </header>
-    <!--main container-->    
+    <!--main container-->
     <div class="container">
         <!--first row-->
         <div class="row">
@@ -41,7 +41,7 @@
                     </div>
                 </form>
             </div>
-            
+
             <!--instructions-->
             <div class="colS5" id="column">
                 <h4 id="instruction-header" class="z-depth-5">Instructions</h4>
@@ -52,25 +52,25 @@
                 <li class="collection-item">Click on the movie card to get detailed info</li>
                 <li class="collection-item">Enjoy!</li>
             </div>
-            
         </div>
-        
+
         <!--posters row-->
         <div class="row">
+            <h4 class="z-depth-5" id="head2">They are also in...</h4>
             <div id="posters-row" class="responsive-img">
             </div>
-            <!--modal structure-->
-            <div id="modal" class="modal fade" role="dialog" aria-labelledby="orderModalLabel">
-                <span id="modalDetails" class="modal-body">
-                    <p id="modalheaders">Title: <span id="display-title"></span></p>
-                    <img id="display-image"></img>
-                    <p id="modalheaders">Plot: <span id="display-plot"></span></p>
-                    <p id="modalheaders">Rating: <span id="display-rating"></span></p>
-                    <p id="modalheaders">Release: <span id="display-release"></span></p>
-                    <p id="modalheaders">Runtime: <span id="display-runtime"></span></p>
-                </span>
-            </div>
+        <!--modal structure-->
+        <div id="modal" class="modal fade" role="dialog" aria-labelledby="orderModalLabel">
+            <span id="modalDetails" class="modal-body">
+                <p id="modalheaders">Title: </p><span id="display-title" class="display"></span>
+                <img id="display-image"></img>
+                <p id="modalheaders">Plot: </p><span id="display-plot" class="display"></span>
+                <p id="modalheaders">Rating: </p><span id="display-rating" class="display"></span>
+                <p id="modalheaders">Release: </p><span id="display-release" class="display"></span>
+                <p id="modalheaders">Runtime: </p><span id="display-runtime" class="display"></span>
+            </span>
         </div>
+    </div>
 
     </div>
     <!--jQuery-->
