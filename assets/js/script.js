@@ -242,7 +242,7 @@ displayObjModal(movObj)
 
 function displayObjModal(movObject) {
   $("#display-title").text(movObject.title);
-  $("#display-image").text(movObject.largeimage);
+  $("#display-image").attr("src", movObject.source);
   $("#display-plot").text(movObject.synopsis);
   $("#display-rating").text(movObject.rating);
   $("#display-release").text(movObject.release);
