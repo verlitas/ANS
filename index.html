@@ -21,12 +21,11 @@
     <header>
         <a class="logo" href="index.html"><img src="assets/img/webname.png"></a>
     </header>
-    <!--main container-->
+    <!--main container-->    
     <div class="container">
         <!--first row-->
         <div class="row">
             <div class="col s12">
-                <!--nav logo-->
             </div>
         </div>
 
@@ -57,19 +56,19 @@
         </div>
         
         <!--posters row-->
-        <div id="posters-row" class="row">
-                <h4 class="z-depth-5">They are also in...</h4>
-        </div>
-        <!--modal trigger-->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">CARD</a>
-        <!--modal structure-->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4 id="modal">Movie Title:</h4><span id="title">This is the movie title</span>
-                <h6 id="modal">Actors:</h6> <span id="actors">These are the actors</span>
-                <h6 id="modal">Plot:</h6><span id="plot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta non reiciendis quos explicabo rem iusto velit omnis mollitia? Repudiandae quos fugiat, itaque eligendi unde ipsam molestias impedit necessitatibus nam.Aspernatur corporis molestias et accusamus suscipit doloribus non qui vel explicabo maxime, impedit tempora animi quod minus perspiciatis sit, perferendis laboriosam dolor illo. Nihil corporis inventore, animi veritatis rerum totam?</span>
-                <h6 id="modal">Rating:</h6><span id="rating">-10000/1</span>
-                <h6 id="modal">Release:</h6><span id="release">2094</span>
+        <div class="row">
+            <div id="posters-row" class="responsive-img">
+            </div>
+            <!--modal structure-->
+            <div id="modal" class="modal fade" role="dialog" aria-labelledby="orderModalLabel">
+                <span id="modalDetails" class="modal-body">
+                    <p id="modalheaders">Title: <span id="display-title"></span></p>
+                    <img id="display-image"></img>
+                    <p id="modalheaders">Plot: <span id="display-plot"></span></p>
+                    <p id="modalheaders">Rating: <span id="display-rating"></span></p>
+                    <p id="modalheaders">Release: <span id="display-release"></span></p>
+                    <p id="modalheaders">Runtime: <span id="display-runtime"></span></p>
+                </span>
             </div>
         </div>
 
@@ -79,7 +78,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!--js script-->
     <script src="assets/js/cardDisplayScript.js"></script>
-    <script src = "assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

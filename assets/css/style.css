@@ -45,12 +45,19 @@ h4, h6 {
     display: flex;
 }
 
-#modal {
-    width: fit-content;
+#modalheaders {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
 }
 
 #title, #actors, #plot, #rating, #release {
     color: black;
+}
+
+#display-image {
+    width: fit-content;
 }
 
 #row2 {
@@ -65,4 +72,8 @@ h4, h6 {
 
 .container {
     border-radius: 10px;
+}
+
+.responsive-img:hover {
+    box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2), 0 13px 20px 0 rgba(255, 255, 255, 0.19);
 }
