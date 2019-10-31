@@ -43,6 +43,8 @@ function getMovies(pActorName) {
   //Reset the array, 'movieObjects'
   movieObjects = [];
 
+  console.log("cleared movie objects");
+
   //IF the parameter type is NOT a string, then...
   if (typeof pActorName !== "string") {
     //Log an error and return null: we do not want to run further code in this function.
