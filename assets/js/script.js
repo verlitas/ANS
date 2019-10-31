@@ -43,8 +43,6 @@ function getMovies(pActorName) {
   //Reset the array, 'movieObjects'
   movieObjects = [];
 
-  console.log("cleared movie objects");
-
   //IF the parameter type is NOT a string, then...
   if (typeof pActorName !== "string") {
     //Log an error and return null: we do not want to run further code in this function.
@@ -226,25 +224,28 @@ function dummy_getMovies(pActorName) {
 
 //listens for a click on posters row
 $("#posters-row").on("click", function (event) {
+  console.log($(event.target).hasClass("responsive-img poster"));
   //checks if the event that was clicked has a class of responsive-img poster and is equal to poster
-  if ($(event.target).hasClass("responsive-img poster") === "responsive-img poster") {
+  if ($(event.target).hasClass("responsive-img poster")) {
     console.log("this image")
-// then load modal
-var movieID = $(event.target).attr("id");
-movieObjects.forEach(function(movObj){
-var movObj_title = movObj.title;
-if (movieID === movObj_title) {
-displayObjModal(movObj);
-} 
-})
-}
+    // then load modal
+    var movieID = $(event.target).attr("id");
+    movieObjects.forEach(function (movObj) {
+      var movObj_title = movObj.title;
+      if (movieID === movObj_title) {
+displayObjModal(movObj)
+      }
+    })
 
-function displayObjModal (movObject) {
-$("#display-title") = movObject.title;
-$("#display-image") = movObject.largeimage;
-$("#display-plot") = movObject.synopsis;
-$("#display-rating") = movObject.rating;
-$("#display-release") = movObject.release;
-$("#display-runtime") = movObject.runtime;
+  }
+})
+
+function displayObjModal(movObject) {
+  $("#display-title").text(movObject.title);
+  $("#display-image").text(movObject.largeimage);
+  $("#display-plot").text(movObject.synopsis);
+  $("#display-rating").text(movObject.rating);
+  $("#display-release").text(movObject.release);
+  $("#display-runtime").text(movObject.runtime)
 
 }
