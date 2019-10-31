@@ -19,7 +19,7 @@ $("#submit-btn").on("click", function (event) {
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
   //We are running 'dummy_getMovies' to avoid wasting our API keys.
-  movieObjects = getMovies(uActorName);
+  movieObjects = dummy_getMovies(uActorName);
 })
 
 //----------------------------------------//
