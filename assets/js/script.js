@@ -21,18 +21,24 @@ $("#submit-btn").on("click", function (event) {
   var uActorName = $("#search-bar").val();
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
+  //We are running 'dummy_getMovies' to avoid wasting our API keys.
   movieObjects = dummy_getMovies(uActorName);
-
-  //Append the array, movieObjects, to our index.html.
-  AppendImage(movieObjects);
-
-  console.log("Search completed for actor : " + uActorName);
-  console.log(movieObjects);
 })
 
-/***This function does not yet have back end functionality***/
+//----------------------------------------//
+//-------END OF SEARCH FUNCTIONALITY------//
+//----------------------------------------//
+
+
+
+//----------------------------------------//
+//-------BACK END FUNCTIONALITY-----------//
+//----------------------------------------//
+
+
 //Pass in a string,actor name, to return an array of movie objects.
-function dummy_getMovies(pActorName) {
+//*****Running this function will use our API keys.  It is currently set up NOT to run */
+function getMovies(pActorName) {
 
   //Reset the array, 'movieObjects'
   movieObjects = [];
@@ -48,8 +54,8 @@ function dummy_getMovies(pActorName) {
   var iActor = pActorName.trim();   //Trim off any spaces on the outside of the string.
 
   /* Back end functionality...
-  *  1)   Take in the actor name as a search parameter and send an AJAX call to 'WhatIsMyMovie?'
-  *  2)   IF 'WhatIsMyMovie?' returns some amount of movies, then stores the movie titles in an array, 'movieTitles'.
+  *  1)   Take in the actor name as a search parameter and send an AJAX call to 'TMBD' to return the actor's ID
+  *  2)   IF 'TMDB' returns an ID, then make another AJAX call to 'TMBD' to retrieve a list of movies by the actor.  Add each movie to a list 'movieTitles'
   *  3)   For each movie title in 'movieTitles', send an AJAX call to 'UNOGS'
   *  3a)  >>> IF the movie exists on Netflix, create a new object containing information about the movie.
   *  3b)  >>> Add this object to an array called 'movieObjects'
@@ -57,7 +63,118 @@ function dummy_getMovies(pActorName) {
   *  4)   IF the array 'movieObjects' is NOT null, then return it.
   * */
 
-  //A placeholder array until our Back End is complete
+  //The search parameter for our query
+  var iSearch = pActorName;
+
+  //The URL to be querried.
+  var queryURL = "https://api.themoviedb.org/3/search/person?api_key=41cc40eab0f24f658207f0966da0ca79&language=en-US&page=1&include_adult=false" + "&query=" + iSearch;
+
+  //Log the search parameter
+  console.log(iSearch);
+
+  //Beginning of AJAX calls.  Several AJAX calls are nested within this one.
+  //First AJAX call : Using the parameter of the actor's name, search 'TMDB' for a list of movies with that actor.
+  $.ajax({
+    url: queryURL,    //The URL to be querried
+    method: "GET"     //Runs a method to get information from the 'TMDB' API.
+  })
+    //Once we get a response from our API, then...
+    .then(function (results) {
+      console.log(results);     //Log the results from the API.
+      console.log("Actor ID : " + results.results[0].id);     //Log the ID number of the actor.
+      var actorID = results.results[0].id;    //Set a new variable 'actorID' to the ID number of the first result found on our returned result.
+
+      //Begin a second AJAX call.  This will take the 'actorID' established before and get movies by that actor name using 
+      $.ajax({
+        url: "https://api.themoviedb.org/3/discover/movie?api_key=41cc40eab0f24f658207f0966da0ca79&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_cast=" + actorID,
+        method: "GET"
+      })
+        //Once we get a response from our API, then...
+        .then(function (results) {
+          //Log the results of our call: the movies returned from our call.
+          console.log(results);
+
+          //Set a new variable equal to the results of our results: this is now a list of objects from our API.
+          var iRes = results.results;
+
+          //Set a new empty array: this will store the titles of our movies.
+          var movieTitles = [];
+
+          //For each object inside 'iRes', get the title and add it to our array 'movieTitles'
+          iRes.forEach(title => {
+
+            //Push the title of the movie to the array.
+            movieTitles.push(title.original_title);
+
+          });
+
+          //Log our movie titles.
+          console.log(movieTitles);
+
+          //~~~~~~~~~~Limit titles for testing~~~~~~~~~~//
+          //This limits our movie titles to 1 to avoid bankrupting Martin.
+          movieTitles = movieTitles.splice(0, 1);
+          console.log(movieTitles);
+          //~~~~~~~~~~Limit titles for testing~~~~~~~~~~//
+
+          //For each title within 'movieTitles', check 'UNOGS' to see if the movie exists on Netflix.  If it does, then create a 'movieObject' and add that object to our global array 'movieObjects'
+          movieTitles.forEach(pTitle => {
+
+            //Similar to AJAX but different.  I can not explain everything going on here.
+            //We modify the URL based on the current title, pTitle.
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=" + pTitle + "&cl=78&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and",
+              "method": "GET",
+              "headers": {
+                "x-rapidapi-host": "unogs-unogs-v1.p.rapidapi.com",
+                "x-rapidapi-key": "53a78fd11fmsh48108adf3c93d14p1260d1jsna5ea2a9262c1"
+              }
+            }
+            $.ajax(settings).done(function (response) {
+              console.log(response);
+
+              //Set our Netflix title to the response title from UNOGS.
+              var UNOGS_title = response.ITEMS[0].title;
+
+              //If the Netflix result title is equal to our parameter title, then the movie exists on Netflix, so...
+              if (UNOGS_title === pTitle) {
+                console.log("Titles are equal");
+
+                //Create an object with elements from our result.
+                var movieObject = {
+                  title: response.ITEMS[0].title,
+                  source: response.ITEMS[0].largeimage,
+                  plot: response.ITEMS[0].synopsis,
+                  rating: response.ITEMS[0].rating,
+                  release: response.ITEMS[0].released,
+                  runTime: response.ITEMS[0].runtime
+                }
+
+                //Push the object to our list of movieObjects.
+                movieObjects.push(movieObject);
+                console.log(movieObjects);
+
+                //Append the array, movieObjects, to our index.html.
+                AppendImage(movieObjects);
+
+                console.log("Search completed for actor");
+              }
+              else {
+                console.log("titles are NOT equal");
+              }
+            });
+
+          });
+        })
+    })
+
+  //return the array
+  return movieObjects;
+}
+
+function dummy_getMovies(pActorName) {
   var dummyMovieObjects = [
     {
       title: "dummy 1",
@@ -82,12 +199,17 @@ function dummy_getMovies(pActorName) {
       plot: "Something happens and people do stuff about it",
       rating: "PG-13",
       release: "2010"
-    }
-  ]
+    }]
 
-  //return the array
-  return dummyMovieObjects;
+
+  //Push the object to our list of movieObjects.
+  movieObjects.push(dummyMovieObjects);
+  console.log(movieObjects);
+
+  //Append the array, movieObjects, to our index.html.
+  AppendImage(movieObjects);
 }
+
 
 //----------------------------------------//
 //-------END OF SEARCH FUNCTIONALITY------//
