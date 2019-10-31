@@ -62,12 +62,6 @@ function AppendImage(movieObject)
 
 //----------MAIN----------//
 
-//The component identified as 'posters-row' will listen for click events.
-//Run methods based on the event target (the component which called the event).
-$row.on("click", function(event){
-    console.log("ID of target : " + $(event.target).attr("id") + "... Object : ");
-    console.log(event.target);
-})
 
 //---------MODAL--------//
 
