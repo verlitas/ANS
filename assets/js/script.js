@@ -20,7 +20,7 @@ $("#submit-btn").on("click", function (event) {
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
   //We are running 'dummy_getMovies' to avoid wasting our API keys.
-  movieObjects = getMovies(uActorName);
+  movieObjects = dummy_getMovies(uActorName);
 
   $("#search-bar").val("");
 })
@@ -143,6 +143,7 @@ function getMovies(pActorName) {
               //Set our Netflix title to the response title from UNOGS.
               //For each item within our response, check for an equal title to our parameter.
               console.log("Checking all ITEMS of our response and comparing titles with our parameter : " + pTitle);
+              console.warn("This system of running for each is suboptimal.  Instead I could add all titles to a list, use .contains(), and run the code from there... I think this would work better");
               response.ITEMS.forEach(ITEM => {
 
                 if (ITEM.title) {
