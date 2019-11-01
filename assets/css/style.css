@@ -145,6 +145,11 @@ header {
   margin-right: 15px;
 }
 
+.poster{
+  width: 200px;
+  height : 300px;
+}
+
 /*media*/
 
 @media screen and (max-width: 800px) {
