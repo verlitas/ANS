@@ -7,6 +7,7 @@
 * [APIs](#apis)
 * [Breakdown](#breakdown)
 * [Credits](#credits) 
+* [Screenshot](#screenshot)
 
 ### Description 
 
@@ -45,3 +46,6 @@ Back End
 
 ### Credits
 Brian, Martin, Melody, Richard
+
+### Credits
+![alt text](screenshot.jpeg "Wireframe")
