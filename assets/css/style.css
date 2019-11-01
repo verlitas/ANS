@@ -1,16 +1,16 @@
 /*structures*/
 
 body {
-  background-color: black;
-  color: ghostwhite;
-  font-family: "Staatliches", cursive;
+    background-color: black;
+    color: ghostwhite;
+    font-family: "Staatliches", cursive;
 }
 /* Page logo */
 header {
-  text-align: center;
-  height: auto;
-  background-color: transparent;
-  object-fit: contain;
+    text-align: center;
+    height: auto;
+    background-color: transparent;
+    object-fit: contain;
 }
 .logo {
   height: auto;
@@ -75,6 +75,7 @@ h4, h6 {
     padding: 9px;
     border-radius: 10px;
     display: flex;
+    text-shadow: 4px 4px 4px #000000;
 }
 
 /*ids*/
@@ -84,25 +85,25 @@ h4, h6 {
     padding: 9px;
     border-radius: 10px;
     font-size: 25px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 #modal {
-  width: fit-content;
+    width: fit-content;
 }
+
 #modalheaders {
     background-color: #b0151f;
-    padding: 9px;
+    padding: 6px;
     border-radius: 10px;
     width: max-content;
     margin-right: 5px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
-#title,
-#actors,
-#plot,
-#rating,
-#release {
-  color: black;
+#title, #actors, #plot, #rating, #release {
+    color: black;
 }
 
 #row2 {
@@ -115,34 +116,36 @@ h4, h6 {
 #head2 {
     margin: 0 0 20px 0;
     border-radius: 0 0 10px 10px;
+    text-decoration: underline, solid, 1px;
 }
 
 #submit-btn {
-  float: right;
-  border-radius: 7px;
-  background-color: #b0151f;
+    float: right;
+    border-radius: 7px;
+    background-color: #b0151f;
+    text-shadow: 2px 2px 0px #000000;
 }
 
 #searchname {
-    margin-right: 5px;
+    margin: 0 5px 0 5px;
 }
 
 #modal {
-    width: 690px;
+    width: 660px;
     padding: 15px;
 }
 
 /*class*/
 
 .container {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 .logo {
     height: auto;
     max-width: 627px;
     width: 100%;
-  }
+}
 
 .responsive-img:hover {
     box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2), 0 13px 20px 0 rgba(255, 255, 255, 0.19);
@@ -150,12 +153,13 @@ h4, h6 {
 
 .display {
     color: black;
-    vertical-align: text-top;
+    text-shadow: 2px 2px 0px ghostwhite;
 }
 
-.logo {
-    width: 600px;
-    height: auto;
+.miniImg {
+    float: right;
+    box-shadow: 4px 4px 0px #000000;
+    margin-right: 15px;
 }
 
 .colS4 {
@@ -176,10 +180,6 @@ h4, h6 {
     padding: 0 10px 0 10px;
 }
 
-.colS9 {
-    width: 65%;
-}
-
 /*media*/
 
 @media screen and (max-width:800px) {
@@ -187,11 +187,12 @@ h4, h6 {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 800px) {
     .col-s4 {
-      width: 200px;
-      height: 300px;
-      float: left;
-      margin: 15px;
+        width: 200px;
+        height: 300px;
+        float: left;
+        margin: 15px;
     }
-  }
+}
