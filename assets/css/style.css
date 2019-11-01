@@ -29,6 +29,7 @@ h4, h6 {
     border-radius: 10px;
     font-size: 25px;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 #modal {
@@ -37,10 +38,11 @@ h4, h6 {
 
 #modalheaders {
     background-color: #b0151f;
-    padding: 9px;
+    padding: 6px;
     border-radius: 10px;
     width: max-content;
     margin-right: 5px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 #title, #actors, #plot, #rating, #release {
