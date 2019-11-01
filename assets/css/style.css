@@ -3,7 +3,7 @@ body {
   color: ghostwhite;
   font-family: "Staatliches", cursive;
 }
-
+/* Page logo */
 header {
   text-align: center;
   height: auto;
@@ -24,7 +24,12 @@ header {
   width: 42%;
   float: left;
 }
-/* this code is for the mobile breaks*/
+#submit-btn {
+  float: right;
+  border-radius: 7px;
+  background-color: #b0151f;
+}
+/* this code is for the mobile breaks of the search and instructions blocks*/
 @media screen and (max-width: 800px) {
   .colS5,
   .colS7 {
@@ -32,23 +37,28 @@ header {
   }
 }
 
-posters-row{
-  text-align: center;
-}
-
 .col-s4 {
   float: left;
-  margin: 5px;
-  width: 24%;
+  margin-left: 52px;
+  position: relative;
 }
 
-@media screen and (max-width: 800px) {
+/* this formats the posters for mobile use */
+@media screen and (max-width: 400px) {
   .col-s4 {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
     float: left;
-    margin: 15px;
+    margin: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
   }
+}
+
+.responsive-img:hover {
+  box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2),
+    0 13px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
 h4,
@@ -85,17 +95,7 @@ h6 {
   background-color: rgb(216, 36, 36);
 }
 
-#submit-btn {
-  float: right;
-  border-radius: 7px;
-  background-color: #b0151f;
-}
-
 .container {
   border-radius: 10px;
 }
 
-.responsive-img:hover {
-  box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2),
-    0 13px 20px 0 rgba(255, 255, 255, 0.19);
-}
