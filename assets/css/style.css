@@ -1,3 +1,5 @@
+/*structures*/
+
 body {
   background-color: black;
   color: ghostwhite;
@@ -67,16 +69,32 @@ h6 {
   padding: 9px;
   border-radius: 10px;
   display: flex;
+
+h4, h6 {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
+}
+
+/*ids*/
+
+#modalheader {
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 25px;
 }
 
 #modal {
   width: fit-content;
 }
 #modalheaders {
-  background-color: #b0151f;
-  padding: 9px;
-  border-radius: 10px;
-  display: flex;
+    background-color: #b0151f;
+    padding: 9px;
+    border-radius: 10px;
+    width: max-content;
+    margin-right: 5px;
 }
 
 #title,
@@ -87,15 +105,93 @@ h6 {
   color: black;
 }
 
-#display-image {
-  width: fit-content;
+#row2 {
+    background-color: rgb(216, 36, 36);
+    border-radius: 10px 10px 0px 0;
+    padding: 5px;
+    margin: 0;
 }
 
-#row2 {
-  background-color: rgb(216, 36, 36);
+#head2 {
+    margin: 0 0 20px 0;
+    border-radius: 0 0 10px 10px;
 }
+
+#submit-btn {
+  float: right;
+  border-radius: 7px;
+  background-color: #b0151f;
+}
+
+#searchname {
+    margin-right: 5px;
+}
+
+#modal {
+    width: 690px;
+    padding: 15px;
+}
+
+/*class*/
 
 .container {
   border-radius: 10px;
 }
 
+.logo {
+    height: auto;
+    max-width: 627px;
+    width: 100%;
+  }
+
+.responsive-img:hover {
+    box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.2), 0 13px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.display {
+    color: black;
+    vertical-align: text-top;
+}
+
+.logo {
+    width: 600px;
+    height: auto;
+}
+
+.colS4 {
+    float: left;
+    margin: 1px;
+    width: 24%
+}
+
+.colS5 {
+    width: 42%;
+    float: left;
+    padding: 0 10px 10px 10px;
+}
+
+.colS7 {
+    float: left;
+    width: 58%;
+    padding: 0 10px 0 10px;
+}
+
+.colS9 {
+    width: 65%;
+}
+
+/*media*/
+
+@media screen and (max-width:800px) {
+    .colS5, .colS7 {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .col-s4 {
+      width: 200px;
+      height: 300px;
+      float: left;
+      margin: 15px;
+    }
+  }
