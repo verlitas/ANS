@@ -20,7 +20,9 @@ $("#submit-btn").on("click", function (event) {
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
   //We are running 'dummy_getMovies' to avoid wasting our API keys.
-  movieObjects = dummy_getMovies(uActorName);
+  movieObjects = getMovies(uActorName);
+
+  $("#search-bar").val("");
 })
 
 //----------------------------------------//
@@ -111,7 +113,7 @@ function getMovies(pActorName) {
 
           //~~~~~~~~~~Limit titles for testing~~~~~~~~~~//
           //This limits our movie titles to 1 to avoid bankrupting Martin.
-          movieTitles = movieTitles.splice(0, 3);
+          movieTitles = movieTitles.splice(0, 15);
           console.log(movieTitles);
           console.log("^^^ Our list of movies cut down for API usage");
           //~~~~~~~~~~Limit titles for testing~~~~~~~~~~//
@@ -124,7 +126,7 @@ function getMovies(pActorName) {
             var settings = {
               "async": true,
               "crossDomain": true,
-              "url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=" + pTitle + "&cl=78" + "&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and",
+              "url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=" + pTitle + /* "&cl=78" */ + "&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and",
               "method": "GET",
               "headers": {
                 "x-rapidapi-host": "unogs-unogs-v1.p.rapidapi.com",
@@ -133,45 +135,45 @@ function getMovies(pActorName) {
             }
             $.ajax(settings).done(function (response) {
               console.log(response);
+              console.log("--------------------------------------------------------------")
               console.log("^^^ Our response from UNOGS passing in our title : " + pTitle);
 
               var UNOGS_title;
 
               //Set our Netflix title to the response title from UNOGS.
-              if (response.ITEMS[0].title) {
-                UNOGS_title = response.ITEMS[0].title;
-              }
-              else {
-                console.error("error: response.ITEMS[0] does not have a title");
-                return null;
-              }
+              //For each item within our response, check for an equal title to our parameter.
+              console.log("Checking all ITEMS of our response and comparing titles with our parameter : " + pTitle);
+              response.ITEMS.forEach(ITEM => {
 
-              //Remove any numbers from the titles.
-              UNOGS_title = parseOutNumbers(UNOGS_title);
-              pTitle = parseOutNumbers(pTitle);
+                if (ITEM.title) {
+                  UNOGS_title = ITEM.title;
+                }
+                else {
+                  console.error("error: response.ITEMS[" + ITEM + "] does not have a title");
+                  return null;
+                }
 
-              //If the Netflix result title is equal to our parameter title, then the movie exists on Netflix, so...
-              if (UNOGS_title === pTitle) {
-                console.log("Titles are equal... creating movie object using UNOGS data for movie : " + UNOGS_title);
+                //If the Netflix result title is equal to our parameter title, then the movie exists on Netflix, so...
+                if (UNOGS_title === pTitle) {
+                  console.log("Titles are equal... creating movie object using UNOGS data for movie : " + UNOGS_title);
+
+                  //Append the array, movieObjects, to our index.html.
+                  AppendImage(createMovieObject(ITEM));
+
+                  console.log("UNOGS search completed for movie : " + UNOGS_title);
+
+                  return movieObjects;
+                }
 
 
-
-                //Append the array, movieObjects, to our index.html.
-                AppendImage(createMovieObject(response.ITEMS[0]));
-
-                console.log("Search completed for movie : " + UNOGS_title);
-              }
-              else {
-                console.log("titles are NOT equal... doing nothing else for movie : " + UNOGS_title);
-              }
+              });
             });
-
-            console.log("Search complete for actor : " + pActorName);
 
           });
         })
     })
 
+  console.log("------------------------------------------------------");
   console.log("------------------------------------------------------");
   //return the array
   return movieObjects;

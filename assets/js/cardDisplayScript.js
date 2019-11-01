@@ -5,22 +5,6 @@
 
 var $row = $("#posters-row");
 
-var dummyObject = {
-    title : "dummyTitle",
-    source : "https://via.placeholder.com/200x300"
-}
-
-var dummyObjects = [
-    {
-        title : "dummy1",
-        source : "https://via.placeholder.com/200x300"
-    },
-    {
-        title : "dummy2",
-        source : "https://via.placeholder.com/200x300"
-    }
-]
-
 //----------FUNCTION----------//
 
 /*This function can take in an Array of objects or a single object.
