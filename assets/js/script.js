@@ -16,7 +16,7 @@ $("#submit-btn").on("click", function (event) {
 
   //Get the value (input) of the element ID'd as '#search-bar'
   var uActorName = $("#search-bar").val();
-  $("#searchname").text("Here Are Some Of " + uActorName + "'s ");
+  $("#searchname").text(uActorName + "'s ");
 
   //Set our variable, movieObjects, equal to the return function 'getMovies' and pass in our user's actor input.
   //We are running 'dummy_getMovies' to avoid wasting our API keys.
