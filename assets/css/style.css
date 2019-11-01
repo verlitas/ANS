@@ -31,6 +31,11 @@ header {
     width: 100%;
   }
 }
+
+posters-row{
+  text-align: center;
+}
+
 .col-s4 {
   float: left;
   margin: 5px;
