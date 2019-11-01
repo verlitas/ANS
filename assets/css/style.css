@@ -59,6 +59,7 @@ h4, h6 {
 #head2 {
     margin: 0 0 20px 0;
     border-radius: 0 0 10px 10px;
+    text-decoration: underline, solid, 1px;
 }
 
 #submit-btn {
@@ -69,7 +70,7 @@ h4, h6 {
 }
 
 #searchname {
-    margin-right: 5px;
+    margin: 0 5px 0 5px;
 }
 
 #modal {
@@ -101,6 +102,7 @@ h4, h6 {
 .miniImg {
     float: right;
     box-shadow: 4px 4px 0px #000000;
+    margin-right: 15px;
 }
 
 .colS4 {
