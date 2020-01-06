@@ -2,34 +2,21 @@
 
 ### Table of Contents 
 * [Description](#description) 
-* [Userstory](#userstory) 
-* [Wireframe](#wireframe)
+* [Technologies-Libraries](#technologies-libraries) 
 * [APIs](#apis)
 * [Breakdown](#breakdown)
 * [Credits](#credits) 
-* [Screenshot](#screenshot)
 
 ### Description 
+Actor Netflix User Search is a website designed to let users, who have favorite actors, to search their favorite actor and see what movies are available to them on Netflix.. 
 
-### Userstory
-AS A netflix user with a favorite actor
-I WANT to know which movies are currently streaming on netflix featuring my favorite actor
-SO THAT i will know what movie titles to search on netflix. 
-____________________________________________________________
+## Technologies-Libraries
+Node - Express - JavaScript - JQuery - Bootstrap - CSS - HTML
 
-GIVEN a user specified actor name
-WHEN the name is entered into the search bar and submitted
-THEN the user is provided with a list of movies featuring the actor that are currently streaming on netflix
+## APIs 
+WhatIsMyMovie? - UNOGS - Netflix
 
-### Wireframe
-![alt text](UI.temp.jpg "Wireframe")
-
-### APIs 
-* WhatIsMyMovie?
-* UNOGS
-* Netflix
-
-### Breakdown 
+## Breakdown 
 Front End
 * Learn new CSS Framework
 * HTML & CSS Layout
@@ -37,7 +24,7 @@ Front End
 * Display Results (Generate through JS, results provided by Back-end)
 * Display Modal Information when movie is clicked on.
 
-Back End
+## Back End
 * Query "WhatIsMyMovie?" for a list of movies by searching an actor
 * Return a list of movies from the query
 * Query "UNOGS" for movies on Netflix from our list.
@@ -45,7 +32,8 @@ Back End
 * Send list to front end
 
 ### Credits
-Brian, Martin, Melody, Richard
-
-### Credits
-![alt text](screenshot.jpeg "Wireframe")
+[UABootCamp](https://bootcamp.ce.arizona.edu/coding/)  
+[Melody Kirshberg](https://github.com/verlitas)  
+[Brian Graf](https://github.com/astrobeef)  
+[Martin Stovall](https://github.com/RebelCommand78)  
+[Richard Klevan](https://github.com/raklevan)  
