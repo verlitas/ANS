@@ -16,6 +16,9 @@ Node - Express - JavaScript - JQuery - Bootstrap - CSS - HTML
 ## APIs 
 WhatIsMyMovie? - UNOGS - Netflix
 
+## Screenshot
+![Screenshot](screenshot.jpeg)
+
 ## Breakdown 
 Front End
 * Learn new CSS Framework
