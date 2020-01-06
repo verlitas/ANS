@@ -1,4 +1,4 @@
-# Actor Netflix User Search - Project 1
+![ActorNetflixSearch](logo.png)
 
 ### Table of Contents 
 * [Description](#description) 
@@ -7,7 +7,7 @@
 * [Breakdown](#breakdown)
 * [Credits](#credits) 
 
-### Description 
+## Description 
 Actor Netflix User Search is a website designed to let users, who have favorite actors, to search their favorite actor and see what movies are available to them on Netflix.. 
 
 ## Technologies-Libraries
@@ -31,7 +31,7 @@ Front End
 * Generate Netflix movies' list
 * Send list to front end
 
-### Credits
+## Credits
 [UABootCamp](https://bootcamp.ce.arizona.edu/coding/)  
 [Melody Kirshberg](https://github.com/verlitas)  
 [Brian Graf](https://github.com/astrobeef)  
