@@ -1,4 +1,4 @@
-![ActorNetflixSearch](logo.png)
+![ActorNetflixSearch](image.png)
 
 ### Table of Contents 
 * [Description](#description) 
