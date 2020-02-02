@@ -9,7 +9,7 @@
 * [Credits](#credits) 
 
 ## Description 
-Actor Netflix User Search is a website designed to let users, who have favorite actors, to search their favorite actor and see what movies are available to them on Netflix.. 
+Actor Netflix User Search is a website designed to let users, who have favorite actors, to search their favorite actor and see what movies are available to them on Netflix. 
 
 ## Technologies-Libraries
 Node - Express - JavaScript - JQuery - Bootstrap - CSS - HTML
