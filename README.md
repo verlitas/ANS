@@ -20,6 +20,13 @@ WhatIsMyMovie? - UNOGS - Netflix
 ## Screenshot
 ![Screenshot](screenshot.jpeg)
 
+Live link: Unfortunately the project runs on a limited number of queries before it is charged. 
+To view this project please install by:
+In your terminal type:
+```git clone https://github.com/verlitas/ANS.git```
+* Open in Visual Studio replace api keys, build and run.
+* For further instructions, visit https://help.github.com.
+
 ## Breakdown 
 Front End
 * Learn new CSS Framework
@@ -36,8 +43,8 @@ Front End
 * Send list to front end
 
 ## Credits
-[UABootCamp](https://bootcamp.ce.arizona.edu/coding/)  
 [Melody Kirshberg](https://github.com/verlitas)  
 [Brian Graf](https://github.com/astrobeef)  
 [Martin Stovall](https://github.com/RebelCommand78)  
 [Richard Klevan](https://github.com/raklevan)  
+[UABootCamp](https://bootcamp.ce.arizona.edu/coding/)  
